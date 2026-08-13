@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Page Not Found — MEAT Universe</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%232C3A28'/%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='%23C4973A' stroke-width='2'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-weight='bold' font-size='58' fill='%23D4A84B' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1P7BC8Q3V1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1P7BC8Q3V1');
+  gtag('event', 'page_not_found', { event_category: 'error', page_location: window.location.href, page_referrer: document.referrer });
+</script>
+<style>
+  :root{
+    --cream:#F7F3EC;
+    --gold:#C4973A;
+    --gold-light:#D4A84B;
+    --void:#141C12;
+    --void-2:#1C2619;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    background:radial-gradient(ellipse at 50% 40%, var(--void-2) 0%, var(--void) 75%);
+    color:var(--cream);
+    font-family:'Jost',sans-serif;
+    font-weight:300;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:32px;
+    position:relative;
+    overflow:hidden;
+  }
+  .star{position:absolute;width:2px;height:2px;background:#F4E4C1;border-radius:50%;}
+  .wrap{max-width:540px;position:relative;z-index:1;}
+  .mark{
+    width:96px;height:96px;
+    border-radius:50%;
+    background:radial-gradient(circle at 38% 32%, #3D5237 0%, #2C3A28 60%, var(--void-2) 100%);
+    border:1px solid rgba(196,151,58,0.55);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 32px;
+    box-shadow:0 0 50px rgba(196,151,58,0.35);
+  }
+  .mark span{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:46px;
+    background:linear-gradient(160deg, #F4E4C1 0%, var(--gold-light) 45%, var(--gold) 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .eyebrow{font-size:13px;letter-spacing:.4em;text-transform:uppercase;color:rgba(247,243,236,0.5);margin-bottom:20px;}
+  h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,7vw,60px);margin-bottom:16px;line-height:1.1;}
+  h1 em{font-style:italic;color:var(--gold);}
+  p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:rgba(247,243,236,0.65);line-height:1.7;margin-bottom:36px;}
+  a.home{
+    display:inline-block;
+    padding:16px 40px;
+    background:var(--gold);
+    color:var(--void);
+    font-weight:500;
+    font-size:14px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    text-decoration:none;
+    font-family:'Jost',sans-serif;
+    transition:background .2s;
+  }
+  a.home:hover{background:var(--gold-light);}
+</style>
+</head>
+<body>
+  <div id="stars"></div>
+  <div class="wrap">
+    <div class="mark"><span>M</span></div>
+    <p class="eyebrow">404</p>
+    <h1>Lost in the <em>sky.</em></h1>
+    <p>This star doesn't exist in the MEAT Universe — but there's a whole constellation waiting back home.</p>
+    <a class="home" href="/">Back to MEAT Universe</a>
+  </div>
+<script>
+  var container = document.getElementById('stars');
+  for(var i=0;i<60;i++){
+    var s = document.createElement('span');
+    s.className = 'star';
+    s.style.top = (Math.random()*100) + '%';
+    s.style.left = (Math.random()*100) + '%';
+    s.style.opacity = 0.2 + Math.random()*0.6;
+    container.appendChild(s);
+  }
+</script>
+</body>
+</html>

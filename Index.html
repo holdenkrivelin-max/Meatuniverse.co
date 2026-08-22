@@ -141,7 +141,7 @@
     <p style="font-size:14px;color:rgba(44,58,40,0.75);line-height:1.85;">MEAT Hospitality Group is the proof — real dinners, happening now. MEAT Empire is where creators build their own thing with our infrastructure behind them. The Store, the podcast, the newsletter — all one mission, all connected here.</p>
   </div>
 
-  <p style="font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;font-size:clamp(22px,3.2vw,30px);color:#2C3A28;margin-top:28px;letter-spacing:.02em;">Let's MEAT.</p>
+  <p style="font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;font-size:clamp(22px,3.2vw,30px);color:var(--dark);margin-top:28px;letter-spacing:.02em;">Let's MEAT.</p>
 </div>
 
 <div class="section beige">
@@ -300,7 +300,105 @@
     <p style="text-align:center;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin:56px 0 20px;">How We Get There</p>
     <p style="text-align:center;font-size:14.5px;color:var(--muted);max-width:600px;margin:0 auto;line-height:1.9;">Prove the dinner format repeats. Earn real partnerships — starting with even one real MEAT Points redemption. Build the app, simply at first. Then grow from what's actually proven, not from a bigger pitch.</p>
 
+    <p style="text-align:center;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin:40px 0 16px;">Relevance Before Inventory</p>
+    <p style="text-align:center;font-size:14.5px;color:var(--muted);max-width:600px;margin:0 auto;line-height:1.9;">Most rewards ecosystems show you every offer and hope something sticks. MEAT learns you first — what you love, what you don't — then only shows what actually fits your life. The right person, the right room, the right opportunity, the right reward. One user at a time.</p>
+
+    <p style="text-align:center;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin:40px 0 16px;">MEAT Grows As You Grow</p>
+    <p style="text-align:center;font-size:14.5px;color:var(--muted);max-width:600px;margin:0 auto;line-height:1.9;">Most apps recommend the same thing forever. MEAT keeps asking: where are you, where would you like to be — and updates as the answers change. MEAT doesn't define you by who you were when you signed up. It evolves with who you're becoming.</p>
+
+    <p style="font-size:14px;color:var(--muted);text-align:center;margin-top:20px;line-height:1.85;max-width:560px;margin-left:auto;margin-right:auto;">There for the milestones, and everything in between.</p>
+
+    <p style="font-size:15px;color:var(--dark);text-align:center;margin-top:24px;font-style:italic;">MEAT makes you feel limitless — like anything is possible.</p>
+
+    <p style="text-align:center;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin:56px 0 20px;">Try It Right Now</p>
+    <div style="max-width:600px;margin:0 auto;background:rgba(44,58,40,0.03);border:1px solid rgba(44,58,40,0.15);border-radius:16px;padding:36px 30px;text-align:center;">
+      <p style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(22px,3.2vw,26px);color:var(--dark);margin-bottom:10px;">What's your first step?</p>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.8;margin-bottom:24px;">The app isn't built yet — but this part of it already works.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:24px;">
+        <button onclick="uGenerateFirstStep('stuck')" style="padding:10px 16px;background:transparent;border:1px solid rgba(44,58,40,0.25);border-radius:20px;color:var(--dark);font-size:12px;cursor:pointer;font-family:inherit;">Feeling Stuck</button>
+        <button onclick="uGenerateFirstStep('isolated')" style="padding:10px 16px;background:transparent;border:1px solid rgba(44,58,40,0.25);border-radius:20px;color:var(--dark);font-size:12px;cursor:pointer;font-family:inherit;">Feeling Isolated</button>
+        <button onclick="uGenerateFirstStep('novelty')" style="padding:10px 16px;background:transparent;border:1px solid rgba(44,58,40,0.25);border-radius:20px;color:var(--dark);font-size:12px;cursor:pointer;font-family:inherit;">Want Something New</button>
+      </div>
+      <div id="ufsg-result" style="display:none;background:white;border-radius:10px;padding:20px 22px;text-align:left;">
+        <p style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Your First Step</p>
+        <p id="ufsg-result-text" style="font-family:'Cormorant Garamond',serif;font-size:17px;color:#2C3A28;line-height:1.5;"></p>
+      </div>
+    </div>
+    <script>
+      var uFsgSteps = {
+        stuck: ["Text one person you've been meaning to reach out to.", "Write down one thing you'd try if you weren't afraid of it going wrong.", "Say your idea out loud to one person, even if it's half-formed."],
+        isolated: ["Sit somewhere public today instead of at home.", "Say yes to the next invite, even the small one.", "Ask someone to grab coffee sometime this week."],
+        novelty: ["Try the restaurant you've been scrolling past on your maps app.", "Take a different route somewhere today.", "Go somewhere in your own city you've never actually been."]
+      };
+      function uGenerateFirstStep(category){
+        var options = uFsgSteps[category];
+        var pick = options[Math.floor(Math.random()*options.length)];
+        document.getElementById('ufsg-result-text').textContent = pick;
+        document.getElementById('ufsg-result').style.display = 'block';
+      }
+    </script>
+
+    <p style="text-align:center;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin:56px 0 28px;">A First Look Inside</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:36px;">
+      <div style="width:250px;background:#0d0d0d;border-radius:36px;padding:12px;box-shadow:0 20px 50px rgba(0,0,0,0.25);">
+        <div style="background:#F7F3EC;border-radius:26px;overflow:hidden;position:relative;height:490px;">
+          <div style="position:absolute;top:8px;left:50%;transform:translateX(-50%);width:70px;height:18px;background:#0d0d0d;border-radius:10px;z-index:2;"></div>
+          <div style="padding:48px 20px 22px;text-align:left;">
+            <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#2C3A28;margin-bottom:4px;">Good morning, Holden.</p>
+            <p style="font-size:10px;color:rgba(44,58,40,0.55);margin-bottom:20px;">Here's your list for today.</p>
+            <div style="background:#EDE7D8;border:1px solid rgba(122,146,112,0.4);border-radius:8px;padding:12px 14px;margin-bottom:10px;display:flex;align-items:center;gap:10px;">
+              <div style="width:16px;height:16px;background:#2C3A28;border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#F7F3EC;font-size:10px;">✓</div>
+              <div style="flex:1;">
+                <p style="font-size:10.5px;color:rgba(44,58,40,0.5);text-decoration:line-through;margin-bottom:2px;">Send that email to schedule the work meeting for Monday</p>
+                <p style="font-size:9px;color:#7A9270;font-weight:700;">+10 points earned</p>
+              </div>
+            </div>
+            <div style="background:white;border:1px solid rgba(44,58,40,0.12);border-radius:8px;padding:12px 14px;display:flex;align-items:center;gap:10px;">
+              <div style="width:16px;height:16px;border:1.5px solid rgba(44,58,40,0.25);border-radius:4px;flex-shrink:0;"></div>
+              <div style="flex:1;">
+                <p style="font-size:11px;color:#2C3A28;font-weight:600;margin-bottom:2px;">Try the new coffee shop on 5th</p>
+                <p style="font-size:9px;color:#7A9270;font-weight:600;">Worth 10 points</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="color:var(--muted);font-size:11px;margin-top:16px;text-align:center;">Today's First Steps</p>
+      </div>
+
+      <div style="width:250px;background:#0d0d0d;border-radius:36px;padding:12px;box-shadow:0 20px 50px rgba(0,0,0,0.25);">
+        <div style="background:#F7F3EC;border-radius:26px;overflow:hidden;position:relative;height:490px;">
+          <div style="position:absolute;top:8px;left:50%;transform:translateX(-50%);width:70px;height:18px;background:#0d0d0d;border-radius:10px;z-index:2;"></div>
+          <div style="padding:44px 18px 18px;text-align:left;overflow-y:auto;height:432px;" class="u-rewards-accordion">
+            <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#7A9270;margin-bottom:6px;">MEAT Rewards</p>
+            <p style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:26px;color:#2C3A28;margin-bottom:12px;">10 <span style="font-size:12px;font-weight:400;color:rgba(44,58,40,0.5);">points</span></p>
+            <details open style="margin-bottom:6px;">
+              <summary style="font-size:9.5px;font-weight:700;color:#2C3A28;background:#EDE7D8;border-radius:6px;padding:8px 10px;cursor:pointer;">Right Now · 0–20 pts</summary>
+              <div style="padding:8px 10px;"><p style="font-size:9px;color:rgba(44,58,40,0.65);">A coffee, on us — first points redeemable same day.</p></div>
+            </details>
+            <details style="margin-bottom:6px;">
+              <summary style="font-size:9.5px;font-weight:700;color:#2C3A28;background:#EDE7D8;border-radius:6px;padding:8px 10px;cursor:pointer;">This Week · 50–150 pts 🔒</summary>
+              <div style="padding:8px 10px;"><p style="font-size:9px;color:rgba(44,58,40,0.65);">Coffee shop credit, small merch discount.</p></div>
+            </details>
+            <details style="margin-bottom:6px;">
+              <summary style="font-size:9.5px;font-weight:700;color:#2C3A28;background:#EDE7D8;border-radius:6px;padding:8px 10px;cursor:pointer;">This Month · 150–400 pts 🔒</summary>
+              <div style="padding:8px 10px;"><p style="font-size:9px;color:rgba(44,58,40,0.65);">Priority dinner access, bigger merch discount.</p></div>
+            </details>
+            <details>
+              <summary style="font-size:9.5px;font-weight:700;color:#2C3A28;background:#EDE7D8;border-radius:6px;padding:8px 10px;cursor:pointer;">A Year Strong · 1000+ pts 🔒</summary>
+              <div style="padding:8px 10px;"><p style="font-size:9px;color:rgba(44,58,40,0.65);">Founding Meatie status, lasting recognition.</p></div>
+            </details>
+            <p style="font-size:8.5px;color:rgba(44,58,40,0.4);font-style:italic;margin-top:10px;">The more you do, the more it opens up.</p>
+          </div>
+        </div>
+        <p style="color:var(--muted);font-size:11px;margin-top:16px;text-align:center;">MEAT Rewards — Grows With You</p>
+      </div>
+    </div>
+    <style>.u-rewards-accordion summary::-webkit-details-marker{display:none}.u-rewards-accordion summary{list-style:none}</style>
+    <p style="font-size:12px;color:var(--muted);font-style:italic;margin-top:24px;text-align:center;">Mockup shown for illustration — the actual app is still being built.</p>
+
     <p style="font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;font-size:18px;color:var(--muted);text-align:center;margin-top:40px;">Don't watch us dream. Watch us execute.</p>
+
+    <p style="font-size:13px;color:var(--muted);line-height:1.85;text-align:center;max-width:540px;margin:32px auto 0;">We didn't invent showing up for each other, or trying something new. That's always been possible. We just built something new that's been right in front of us the whole time.</p>
 
     <p style="font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;font-size:clamp(22px,3.4vw,34px);color:var(--gold);text-align:center;margin-top:24px;line-height:1.4;">Wherever we go next, Let's MEAT.<br><span style="font-size:13px;font-style:normal;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);">Wherever we go, it's ours.</span></p>
   </div>
@@ -312,7 +410,7 @@
   <p style="margin-top:28px;"><strong>Start somewhere. Dinners. The app. Create your own thing. It all feeds the same mission.</strong></p>
   <p style="font-family:'Cormorant Garamond',serif;font-weight:600;font-style:italic;font-size:clamp(20px,2.8vw,26px);color:#7A9270;margin-top:24px;">Let's MEAT.</p>
   <div class="social-links">
-    <a href="https://meathospitalitygroup.com" target="_blank">MEAT Hospitality</a>
+    <a href="https://meathospitalitygroup.com" target="_blank">MEAT Hospitality Group</a>
     <a href="https://meatempire.net" target="_blank">MEAT Empire</a>
     <a href="https://storemhg.com" target="_blank">MEAT Hospitality Group Store</a>
     <a href="https://instagram.com/meathospitalitygroup" target="_blank">Instagram</a>
